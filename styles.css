@@ -1,0 +1,266 @@
+@font-face {
+    font-family:WickedKnight ;
+    src: url(WickedKnight-Regular.ttf);
+}
+@font-face {
+    font-family: Bandizo;
+    src: url(Bandizo.ttf);
+}
+@font-face {
+    font-family: title;
+    src: url(GrundBurn-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: relative;
+
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    animation-fill-mode: both;
+    animation: slide 36s infinite ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.slider imgwrapper {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+position: relative;   
+ overflow: hidden;
+}
+
+.imgwrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:  center center;
+    
+}
+
+.banner6 .imgwrapper img {
+  position: absolute;      /* allows moving */
+             /* shift image up by 150px */
+  transform: translateY(-0.5%); /* center horizontally */        /* make image taller than container for upward shift */
+  object-fit: cover; 
+  object-position: center center;      /* cover container */
+}
+
+
+ .word1 { animation: textslide 36s infinite ;animation-delay: 0s; animation-fill-mode: both; }
+ .word2 { animation: textslide 36s infinite ;animation-delay: 4s; animation-fill-mode: both; }
+ .word3 { animation: textslide 36s infinite ;animation-delay: 8s; animation-fill-mode: both; }
+ .word4 { animation: textslide 36s infinite ;animation-delay: 12s; animation-fill-mode: both; }
+ .word5 { animation: textslide 36s infinite ;animation-delay: 16s; animation-fill-mode: both; }
+ .word6 { animation: textslide 36s infinite ;animation-delay: 20s; animation-fill-mode: both; }
+ .word7 { animation: textslide 36s infinite ;animation-delay: 24s; animation-fill-mode: both; }
+ .word8 { animation: textslide 36s infinite ;animation-delay: 28s; animation-fill-mode: both; }
+ .word9 { animation: textslide 36s infinite ;animation-delay: 32s; animation-fill-mode: both; }
+
+
+
+ @keyframes textslide {
+  0%     { opacity: 0; transform: translateX(-100%);}
+  8%     { opacity: 1; transform: translateX(0%);}
+  15%    { opacity: 1; transform: translateX(0%);}
+  20%    { opacity: 0; transform: translateX(100%);}
+  100%   { opacity: 0; transform: translateX(100%);}
+ }
+.text {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+  
+  z-index: 999;
+} 
+.text h1 {
+    position: absolute;
+    top: 60vh;
+    left: 10vw;
+    font-family: WickedKnight;
+    font-size: 250px;
+    text-shadow: 3px 2px 6px black;
+    color: white;
+}
+
+.text h1 span {
+    display: block;
+}
+
+
+
+.banner1 {animation-delay: 0s; z-index: 9;}
+.banner2 {animation-delay: 4s; z-index: 8;}
+.banner3 {animation-delay: 8s; z-index: 7;}
+.banner4 {animation-delay: 12s; z-index: 6;}
+.banner5 {animation-delay: 16s; z-index: 5;}
+.banner6 {animation-delay: 20s; z-index: 4;}
+.banner7 {animation-delay: 24s; z-index: 3;}
+.banner8 {animation-delay: 28s; z-index: 2;}
+.banner9 {animation-delay: 32s; z-index: 1;}
+
+@keyframes slide {
+     
+ 
+  0%     { opacity: 0; }
+  8%     { opacity: 1; }
+  15%    { opacity: 1; }
+  20%    { opacity: 0; }
+  100%   { opacity: 0; }
+}
+
+
+.input input{
+    position: absolute;
+    top: 10px;
+    right: 11vw;
+    animation: input 3s ease-in-out alternate backwards;
+    z-index: 1000;
+    width: 50vw;
+    height: 8vh;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: Bandizo;
+    font-size: 30px;
+    padding: auto 12px;
+    background: rgb(0, 0, 0);
+    border-radius: 30px;
+    color: white; 
+}
+
+.input input:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 5px 5px 20px rgb(42, 33, 1),
+    -5px -5px 20px rgb(42, 33, 1),
+    -5px 5px 20px rgb(42, 33, 1), 
+    5px -5px 20px rgb(42, 33, 1);;
+    color: rgb(0, 0, 0); 
+}
+
+
+.input texti {
+    width: 300px;
+    padding: auto 20px;
+    margin-left: 12px;
+    color: white;
+}
+
+.submit input {
+    position: absolute;
+    top: 10px;
+    right: 2vw;
+    animation: input 3s ease-in-out alternate backwards;
+    z-index: 1000;
+    width: 8vw;
+    height: 8vh;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: Bandizo;
+    font-size: 35px;
+    padding: auto 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.submit input:hover, input:active {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 20px rgb(42, 33, 1),
+    -2px -2px 20px rgb(42, 33, 1),
+    -2px 2px 20px rgb(42, 33, 1), 
+    2px -2px 20px rgb(42, 33, 1);;
+} 
+
+
+.container {
+  animation: submit 36s ease-out forwards;
+  
+  opacity: 0;
+  position: relative;
+  z-index: 1001;
+}
+
+@keyframes submit {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+ 
+/* @keyframes input {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+
+    } 
+    25% {
+        transform: translateX(-20%);
+        opacity: 0;
+    } 
+    75% {
+  transform: translateX(0%);
+        opacity: 0;
+    } 
+    100% {
+ transform: translateX(0%);
+        opacity: 0;
+    } 
+}
+ */
+
+.title {
+    z-index: 1005;
+    position: absolute;
+    top: -3vh;
+    left: 4vh;
+    font-family: title;
+    font-size: 15px;
+    text-shadow: 2px 2px 20px rgb(255, 255, 255),
+    -2px -2px 20px rgb(255, 255, 255),
+    -2px 2px 20px rgb(255, 255, 255), 
+    2px -2px 20px rgb(255, 255, 255);
+    color: black;
+}
+
+.title h1:hover {
+    color: #ffffff;
+    text-shadow: 2px 2px 20px rgb(42, 33, 1),
+    -2px -2px 20px rgb(42, 33, 1),
+    -2px 2px 20px rgb(42, 33, 1), 
+    2px -2px 20px rgb(42, 33, 1);;
+
+
+}
